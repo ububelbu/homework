@@ -18,17 +18,17 @@ user_3 = User(name='Nikita', email='nikita2003@mail.ru')
 session.add(user_3)
 session.commit()
 
-news1 = News(news_title="letter", news_content="hello:) i am rabbit")
+news1 = News(news_title="letter", news_content="hello:) i am jk")
 user_1.news.append(news1)
 session.commit()
 
-news2 = News(news_title="present", news_content="rabbit give you a carrot")
+news2 = News(news_title="pris", news_content="ups")
 news2.user_id = user_1.user_id
 # news2.user = user
 session.add(news2)
 session.commit()
 
-news3 = News(news_title='joke', news_content="its a joke, haha")
+news3 = News(news_title='ok', news_content="haha")
 news3.user_id = user_2.user_id
 session.add(news3)
 session.commit()
