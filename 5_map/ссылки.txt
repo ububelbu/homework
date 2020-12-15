@@ -1,0 +1,6 @@
+https://static-maps.yandex.ru/1.x/?ll=2.295081%2C48.858516&spn=0.002,0.002&l=map
+https://static-maps.yandex.ru/1.x/?ll=-74.044415%2C40.689204&spn=0.002,0.002&l=map
+https://static-maps.yandex.ru/1.x/?ll=2.335932%2C48.861003&spn=0.002,0.002&l=map
+https://static-maps.yandex.ru/1.x/?ll=56.095212%2C58.045045&spn=0.002,0.002&l=map
+https://static-maps.yandex.ru/1.x/?ll=56.245878%2C58.015935&spn=0.002,0.002&l=map
+https://static-maps.yandex.ru/1.x/?ll=56.234537%2C58.016377&spn=0.002,0.002&l=map
