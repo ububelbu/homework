@@ -1,53 +1,26 @@
+class PasswordError(Exception):
+    pass
 
+def check_password(a):
+    bad_sequence = ['qwertyuiop', 'asdfghjkl',
+                    'zxcvbnm', 'йцукенгшщзхъ', 'фывапролджэё', 'ячсмитьбю']
+    num = list('1234567890')
+    if len(a) <= 9:
+        return 'LengthError'
+    if a.islower() or a.isupper():
+        return 'LetterError'
 
-def check_phone_namber(namber):
-    # 1
-    if namber.startwith("8"):
-        namber.replace("8", "+7", 1)
-    if not namber.startwith("+7"):
-        return "error"
-    # 2
-    namber = namber.replace(" ", "")
-    # 3
-    if "(" in namber or ")" in namber:
-        if namber.count("(") != namber.count(")"):
-            return "error"
-        if namber.count("(") > 1 or namber.count(")") > 1:
-            return "error"
-        if namber.find("(") > namber.find(")"):
-            return "error"
+    if a.isdigit() or a.isalpha():
+        return 'DigitError'
 
-    for char in namber:
-        if not char.isdigit() and char != "+":
-            namber = namber.replace(char, "")
+    b = a.lower()
+    for i in bad_sequence:
+        for j in range(len(i) - 2):
+            if i[j: j + 3] in b:
+                return 'SequenceError'
 
-    if len(namber) != 12:
-        return "error"
+    for i in num:
+        if i not in a:
+            return 'ok'
 
-    return namberdef check_phone_namber(namber):
-     #1
-    if namber.startwith("8"):
-        namber.replace("8", "+7", 1)
-    if not namber.startwith("+7"):
-        return "error"
-    #2
-    namber = namber.replace(" ", "")
-    #3
-    if "("in namber or")" in namber:
-        if namber.count("(") != namber.count(")"):
-            return "error"
-        if namber.count("(") >1 or namber.count(")") >1:
-            return "error"
-        if namber.find("(") > namber.find(")"):
-            return "error"
-
-    for char in namber:
-        if not char.isdigit() and char != "+":
-            namber = namber.replace(char, "")
-
-    if len(namber) != 12:
-        return "error"
-
-
-
-    return namber
+    return 'DigitError'
